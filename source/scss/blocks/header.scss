@@ -1,0 +1,51 @@
+.header__wrapper {
+    display: flex;
+}
+
+.header__logo-link {
+    padding-top: 27px;
+}
+
+.header__phone {
+    margin-left: auto;
+    padding: 40px 25px 0; 
+}
+
+.header__phone-link--number {
+    position: relative;
+    font-family: 'Inter-Bold', sans-serif;
+    font-weight: 700;
+    line-height: 22px;
+    border-bottom: 1px dashed #29ABE2;
+}
+
+.header__phone-link--number::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    background-image: url(../../images/arrow-phone.svg);
+    background-repeat: no-repeat;
+    top: 6px;
+    left: -17px;
+}
+
+.header__phone-link--icon {
+    display: none;
+}
+
+.header__navigation {
+    padding-top: 40px;
+}
+
+@media (max-width: 700px) { 
+    .header__phone {
+        padding-top: 36px;
+    }
+    .header__phone-link--number {
+        display: none;
+    }
+    .header__phone-link--icon {
+        display: block;
+    }
+}

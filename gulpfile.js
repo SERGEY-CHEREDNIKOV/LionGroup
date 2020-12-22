@@ -17,6 +17,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
 const concat = require('gulp-concat');
+const babel = require('gulp-babel');
 const browsersync = require("browser-sync").create();
 
 /* Paths */
@@ -107,6 +108,9 @@ function css() {
 function js() {
     return src(path.src.js, { base: './source/js/' })
         .pipe(plumber())
+        .pipe(babel({
+            presets: ["@babel/preset-env"]
+        }))
         .pipe(rigger())
         .pipe(gulp.dest(path.build.js))
         .pipe(uglify())
