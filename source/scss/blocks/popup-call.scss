@@ -1,0 +1,160 @@
+.popup-call {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 20;
+    overflow-y: scroll;
+
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+    // transform: scale(0);
+    // transition: 0.5s; 
+}
+
+.modal-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-call__container {
+    position: relative;
+    background-color: #fff;
+
+    min-height: 800px;
+    max-width: 650px;
+    margin: 100px auto;
+    padding: 75px 85px 0;
+
+
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    // transform: translate(0px, -100%);
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.modal-open .popup-call__container {
+    opacity: 1;
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+}
+
+.popup-call__title {
+    font-family: 'Inter-Bold', sans-serif;;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #29ABE2;
+    margin-bottom: 65px;
+}
+
+.popup-call__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-call__name,
+.popup-call__phone,
+.popup-call__time {
+    margin-bottom: 15px;
+}
+
+.popup-call__input-name,
+.popup-call__input-phone {
+    margin-bottom: 65px;
+}
+
+.popup-call__input-time {
+    margin-bottom: 10px;
+}
+
+.popup-call__input-name,
+.popup-call__input-phone,
+.popup-call__input-time {
+    font-size: 24px;
+    line-height: 29px;
+    color: #191919;
+    outline: none;
+    opacity: 0.5;
+    border: none;
+    border-bottom: 1px solid #999999;
+
+}
+
+.popup-call__input-name:focus,
+.popup-call__input-phone:focus,
+.popup-call__input-time:focus {
+    opacity: 0.5;
+    border-bottom: 1px solid #29ABE2;
+}
+
+.popup-call__time-text {
+    font-size: 12px;
+    line-height: 27px;
+    color: #999999;
+    margin-bottom: 65px;
+}
+
+.popup-call__btn {
+    margin-bottom: 30px;
+}
+
+.popup-call__btn-text {
+    color: #999999;
+    margin-bottom: 115px;
+}
+
+.popup-call__text-link {
+    display: inline;
+    color: #29ABE2;
+}
+
+
+.popup-call__close {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .popup-call__container {
+        margin: 100px 50px;
+        padding: 75px 20px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .popup-call__title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 40px;
+    }
+    .popup-call__container {
+        margin: 50px 20px;
+    }
+    .popup-call__btn-text {
+        margin-bottom: 25px;
+    }
+    
+
+    .popup-call__input-name, 
+    .popup-call__input-phone {
+        margin-bottom: 50px;
+    }
+    .popup-call__time-text {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .popup-call__close {
+        position: absolute;
+        top: 15px;
+        right: 13px;
+        cursor: pointer;
+    }
+}

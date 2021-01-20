@@ -140,7 +140,7 @@ function images() {
 
 function webP() {
     return src(path.src.webP)
-        .pipe(webp({quality: 90}))
+        .pipe(webp({quality: 70}))
         .pipe(dest(path.build.webP));
 }
 
