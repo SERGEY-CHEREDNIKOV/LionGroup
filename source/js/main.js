@@ -1,5 +1,7 @@
 "use strict";
 
+// ----- burger menu -----
+
 const burger = document.querySelector('.navigation__toggle');
 const navigationMenu = document.querySelector('.navigation__menu');
 const body = document.querySelector('body')
@@ -15,18 +17,21 @@ function addClassBlock(nameClass) {
 addClassBlock('navigation__toggle--active');
 
 
+// ----- modal windows -----
+
+
 const modals = () => {
     function bindModal(triggerSelector, modalSelector, closeSelector) {
         const trigger = document.querySelectorAll(triggerSelector),
-              modal = document.querySelector(modalSelector),
-              close = document.querySelector(closeSelector);
+            modal = document.querySelector(modalSelector),
+            close = document.querySelector(closeSelector);
 
         trigger.forEach(item => {
             item.addEventListener('click', (e) => {
                 if (e.target) {
                     e.preventDefault();
                 }
-    
+
                 modal.classList.add('modal-open');
                 document.body.classList.add('overflow');
             });
@@ -46,7 +51,7 @@ const modals = () => {
     }
 
     function showModalByTime(selector, time) {
-        setTimeout(function() {
+        setTimeout(function () {
             document.querySelector(selector).classList.add('modal-open');
             document.body.classList.add('overflow');
         }, time);
@@ -54,7 +59,51 @@ const modals = () => {
 
     bindModal('.repair__call-btn', '.popup-call', '.popup__call--close');
     // bindModal('.phone_link', '.popup', '.popup .popup_close');
-    // showModalByTime('.popup-call', 6000);
+    // showModalByTime('.popup-call', 60000);
 };
 
 modals();
+
+
+// ----- tabs -----
+
+
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+    const header = document.querySelector(headerSelector),
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector);
+
+    function hideTabContent() {
+        content.forEach(item => {
+            item.style.display = 'none';
+        });
+
+        tab.forEach(item => {
+            item.classList.remove(activeClass);
+        });
+    }
+
+    function showTabContent(i = 0) {
+        content[i].style.display = 'block';
+        tab[i].classList.add(activeClass);
+    }
+
+    hideTabContent();
+    showTabContent();
+
+    header.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target &&
+            (target.classList.contains(tabSelector.replace(/\./, "")) ||
+                target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+            tab.forEach((item, i) => {
+                if (target == item || target.parentNode == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+        }
+    });
+};
+
+tabs('.advantages__button-wrapper', '.btn__advantages', '.advantages__content', 'btn__advantages--active');
