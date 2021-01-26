@@ -1,3 +1,19 @@
+.button {
+    position: relative;
+    font-family: 'Inter-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    width: 275px;
+    height: 55px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: #29ABE2;
+
+    outline: none;
+}
+
 .btn {
     position: relative;
     font-family: 'Inter-Bold', sans-serif;
@@ -11,15 +27,10 @@
     cursor: pointer;
     background-color: transparent;
     color: #29ABE2;
+
+    outline: none;
 }
 
-.btn:hover {
-    color: #ffffff;
-}
-
-.btn:active {
-    opacity: 0.7;
-}
 
 .btn::before {
     content: '';
@@ -62,6 +73,14 @@
     transform: scale(0);
 }
 
+.btn:hover {
+    color: #ffffff;
+}
+
+.btn:active {
+    opacity: 0.7;
+}
+
 .btn--order-call {
     padding-top: 0;
 }
@@ -82,6 +101,44 @@
     opacity: 0.7;
 }
 
+.btn__advantages {
+    background-color: #F0EEEE;
+    color: #191919;
+    padding-top: 0;
+    transition: all 0.5s ease;
+}
+
+.btn__advantages:hover {
+    background-color: #999999;
+    color: #ffffff;
+    padding-top: 0;
+}
+
+.btn__advantages--active {
+    background-color: #29ABE2;
+    color: #ffffff;
+}
+
+.btn__advantages--active:hover {
+    background-color: #29ABE2;
+    color: #ffffff;
+}
+
+.btn__advantages:active {
+    opacity: 1;
+}
+
+.btn__advantages:focus {
+    background-color: #29ABE2;
+    color: #ffffff;
+}
+
+@media (max-width: 950px) {
+    .btn__advantages {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .btn {
         border: 2px solid #29ABE2;
@@ -97,9 +154,6 @@
     .btn:active {
         color: #ffffff;
         background-color: #29ABE2;
-    }
-    .btn:focus {
-        outline: none;
     }
 }
 
