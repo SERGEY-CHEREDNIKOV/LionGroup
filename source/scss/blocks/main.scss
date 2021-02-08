@@ -7,9 +7,13 @@
     margin-bottom: 25px;
 }
 
-.main__repair {
+.main__repair,
+.main__sample-apartments,
+.main__question-competitors {
     margin-bottom: 80px;
 }
+
+
 
 @media (max-width: 700px) {
     .main__title {

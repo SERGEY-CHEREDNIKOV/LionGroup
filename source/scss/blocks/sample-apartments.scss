@@ -68,6 +68,10 @@
     white-space: nowrap;
 }
 
+.sample-apartments__content-wrapper {
+    margin-bottom: 80px;
+}
+
 .sample-apartments__slider-item:last-child {
     margin-right: 0px;
 }
@@ -177,6 +181,9 @@
 // }
 
 @media (max-width: 650px) {
+    .sample-apartments__slider-content {
+        flex-direction: column;
+    }
     .sample-apartments__slider-item {
         margin-right: 0px;
         margin-bottom: 20px;
