@@ -26,6 +26,9 @@ const modals = () => {
             modal = document.querySelector(modalSelector),
             close = document.querySelector(closeSelector);
 
+        // const popup = document.querySelectorAll('.popup-explanation'); 
+        // const popupCallback = document.querySelectorAll('.popup-explanation__footer-link');      
+
         trigger.forEach(item => {
             item.addEventListener('click', (e) => {
                 if (e.target) {
@@ -34,6 +37,7 @@ const modals = () => {
 
                 modal.classList.add('modal-open');
                 document.body.classList.add('overflow');
+                
             });
         });
 
@@ -48,6 +52,12 @@ const modals = () => {
                 document.body.classList.remove('overflow');
             }
         });
+
+        // popupCallback.addEventListener('click', () => {
+        //     popup.classList.remove('modal-open');
+        //     document.body.classList.remove('overflow');
+        // });
+
     }
 
     function showModalByTime(selector, time) {
@@ -58,6 +68,10 @@ const modals = () => {
     }
 
     bindModal('.repair__call-btn', '.popup-call', '.popup__call--close');
+    bindModal('.price__content-button--open-popup', '.popup-explanation__popup--active', '.popup-explanation__popup--close');
+    bindModal('.question-competitors__popup--open', '.popup-explanation__popup-cheaper--active', '.popup-explanation__popup-cheaper--close');
+    // bindModal('.popup-explanation__footer-link', '.popup-call', '.popup__call--close');
+    // bindModal('.popup-explanation__footer-link--callback-button', '.popup-call', '.popup__call--close');
     // bindModal('.phone_link', '.popup', '.popup .popup_close');
     // showModalByTime('.popup-call', 60000);
 };
@@ -116,7 +130,7 @@ tabs('.advantages__button-wrapper', '.btn__advantages', '.advantages__content', 
 //         paused = false;
 
 //     const items = document.querySelectorAll(slides);
-          
+
 //     function showSlides(n) {
 //         if (n > items.length) {
 //             slideIndex = 1;

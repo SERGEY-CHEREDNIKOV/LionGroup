@@ -1,0 +1,89 @@
+.price__title {
+    margin-bottom: 30px;
+}
+
+.price__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.price__content-item {
+    max-width: 510px;
+    margin-bottom: 40px;
+}
+
+.price__content-text {
+    margin-bottom: 15px;
+}
+
+.price__content-benefits {
+    font-size: 36px;
+    line-height: 44px;
+    color: #191919;
+}
+
+.price__content-button {
+    cursor: pointer;
+    margin-bottom: 80px;
+}
+
+.price__button-text {
+    font-size: 24px;
+    line-height: 29px;
+    color: #29ABE2;
+    border-bottom: 1px solid #29ABE2;
+}
+
+.price__content-button:active {
+    opacity: 0.6;
+}
+
+.price__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.price__card-item {
+    max-width: 510px;
+}
+
+.price__block-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.price__title-card,
+.price__price-card {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.price__item-text {
+    color: #999999;
+    margin-bottom: 25px;
+}
+
+.price__item-link {
+    display: inline-block;
+    color: #29ABE2;
+    border-bottom: 1px solid #29ABE2;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+.price__item-link:active {
+    opacity: 0.6;
+}
+
+@media (max-width: 1060px) {
+    .price__content-item {
+        max-width: 100%;
+    }
+    .price__card-list {
+        justify-content: center;
+    }
+}

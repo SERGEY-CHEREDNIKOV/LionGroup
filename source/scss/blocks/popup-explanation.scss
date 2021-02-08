@@ -1,0 +1,119 @@
+.popup-explanation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 20;
+    overflow-y: scroll;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.modal-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-explanation__wrapper {
+    position: relative;
+    max-width: 650px;
+    margin: 100px auto;
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+
+
+.modal-open .popup-explanation__wrapper {
+    opacity: 1;
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+}
+
+.popup-explanation__popup-container {
+    position: relative;
+    background-color: #fff;
+    min-height: 800px;
+    padding: 75px 80px 0;
+}
+
+.popup-explanation__popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.popup-explanation__popup-footer {
+    background-color: #F0EEEE;
+    min-height: 100px;
+    padding: 40px 10px;
+}
+
+.popup-explanation__list {
+    margin: 60px 0;
+}
+
+.popup-explanation__item {
+    margin-bottom: 15px;
+}
+
+.popup-explanation__item-title {
+    font-weight: 400;
+}
+
+.popup-explanation__item-calculation {
+    color: #29ABE2;
+}
+
+.popup-explanation__title {
+    margin-bottom: 110px;
+}
+
+.popup-explanation__text {
+   
+    max-width: 510px;
+}
+
+.popup-explanation__text--bottom {
+    margin-bottom: 0px;
+}
+
+.popup-explanation__text--last-element {
+    margin-bottom: 60px;
+}
+
+.popup-explanation__bold-text {
+    margin-bottom: 40px;
+}
+
+.popup-explanation__footer-link {
+    display: inline-block;
+    color: #29ABE2;
+}
+
+@media (max-width: 768px) {
+    .popup-explanation__wrapper {
+        font-size: 16px;
+    }
+    .popup-explanation__popup-container {
+        padding: 75px 15px 0;
+    }
+    .popup-explanation__title {
+        margin-bottom: 40px;
+    }
+    .popup-explanation__list {
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .popup-explanation__wrapper {
+        margin: 70px 15px; 
+    }
+}

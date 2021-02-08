@@ -1,0 +1,33 @@
+.question-competitors {
+    background-color: #F0EEEE;
+    padding: 80px 0;
+}
+
+.question-competitors__button {
+    cursor: pointer;
+}
+
+.question-competitors__button-text {
+    color: #29ABE2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    border-bottom: 1px solid #29ABE2;
+}
+
+@media (max-width: 700px) {
+    .question-competitors {
+        padding: 40px 0;
+    }
+    .question-competitors__button-text {
+        font-size: 30px;
+        line-height: 35px
+    }
+}
+
+@media (max-width: 430px) {
+    .question-competitors__button-text {
+        font-size: 23px;
+        line-height: 30px
+    }
+}
